@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<title>Our Funky HTML Page</title>
+<meta name="description" content="Our first page">
+<meta name="keywords" content="html tutorial template">
+</head>
+<body>
+Content goes here.
+</body>
+<form action="/search" method="POST">
+    {% csrf_token %}
+    <input type="number" name="camada">
+    <input type="submit" value="Enviar">
+    
+</form>
+{%if elements%}
+<h1>Resultados</h1>
+{% endif %}
+{% for element in elements %}
+
+<p>{{element.nombre}}</p>
+<p> {{element.camada}}</p>
+{% endfor %}
+
+</html>
