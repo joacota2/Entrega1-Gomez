@@ -1,3 +1,6 @@
+{% extends 'AppCoder/base.html' %}
+{% load static %}
+{% block content %}
 <!doctype html>
 <html>
 <head>
@@ -48,10 +51,13 @@
 <br><br> Curso<br><br>
 
 {{ form.as_table }}
+
+{% comment %}
 <br><br>Estudiante<br><br>
 {{ form1.as_table }}
 <br><br>Profesor<br><br>
 {{ form2.as_table }}
+{% endcomment %}
 <input type="submit" value="Enviar">
 
 
@@ -61,3 +67,4 @@
 
 </body>
 </html>
+{% endblock %}
